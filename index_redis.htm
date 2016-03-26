@@ -16,15 +16,12 @@ $(function () {
             zoomType: 'xy'
         },
         title: {
-            text: 'Montants investis par tête vs Revenu Médian par foyer fiscal'
-        },
-        subtitle: {
-            text: 'S'
+            text: 'Montants investis par tête vs revenu médian par foyer fiscal'
         },
         xAxis: {
             title: {
                 enabled: true,
-                text: 'Revenu fiscal médian'
+                text: 'Revenu fiscal médian (\u20AC)'
             },
             startOnTick: true,
             endOnTick: true,
@@ -32,7 +29,7 @@ $(function () {
         },
         yAxis: {
             title: {
-                text: 'Montants par tête (euros)'
+                text: 'Montants par tête (\u20AC)'
             }
         },
         exporting : {enabled : false},
@@ -66,20 +63,18 @@ $(function () {
                     }
                 },
                 tooltip: {
-                    headerFormat: '<b>{series.name}</b><br>',
-                    pointFormat: '{point.x} euros de revenus médian, {point.y} euros investis par tête'
+                    pointFormat: '{point.name}'.bold()+':<br>{point.x}'+' \u20AC '+'de revenu médian <br>{point.y}'+' \u20AC '+'investis par tête'
                 }
             }
         },
         series: [{
             name: 'Gauche',
             color: 'rgba(223, 83, 83, .5)',
-            data: [[34134, 491],[36365,961], [37558, 1643], [31810, 557], [31624,451],[35118, 605], [31558,584], [34354, 913], [27605,855],[28405,591],[28974,753]]
-
+            data: [{name: '2ème', x: 34134, y: 491},{name: '3ème', x:36365,y:961},{name: '4ème', x:37558, y:1643},{name: '10ème', x:31810, y:557},{name:'11ème' , x:31624, y:451},{name:'12ème' ,x:35118, y:605},{name:'13ème', x:31558, y:584},{name: '14ème', x:34354, y:913},{name:'18ème', x:27605, y:855},{name:'19ème',x:28405,y:591},{name:'20ème', x:28974,y:753}] 
         }, {
             name: 'Droite',
             color: 'rgba(119, 152, 191, .5)',
-            data: [[38835,989],[38780,285],[46471,391],[50080,271],[38007,390],[37839,307],[48745,294],[37027,769]]
+            data: [{name:'1er', x:38835, y:989},{name:'5ème', x:38780, y:285},{name:'6ème', x:46471, y:391},{name:'7ème', x:50080, y:271},{name:'8ème', x:38007, y:390},{name:'9ème',x:36001,y:390},{name:'15ème', x:37839, y:307},{name:'16ème', x:48745, y:294},{name:'17ème', x:37027, y:769}]
         }]
     });
 });

@@ -11,7 +11,11 @@ ${demo.css}
 		<script type="text/javascript">
 $(function () {
     // Create the chart
-    
+     Highcharts.setOptions({
+        lang : {
+            drillUpText : 'Retour aux arrondissements'
+        }
+    });
     $('#container').highcharts({
         chart: {
             type: 'column',
@@ -19,17 +23,14 @@ $(function () {
     fontSize: '12px'}
         },
         title: {
-            text: 'Montants investis par arrondissement'
-        },
-        subtitle: {
-            text: 'Cliquez sur la colonne de votre arrondissement pour voir la répartition par catégorie '
+            text:' '
         },
         xAxis: {
             type: 'category'
         },
         yAxis: {
             title: {
-                text: 'Montants'
+                text: 'Montants (\u20AC)'
             }
 
         },
@@ -48,7 +49,7 @@ $(function () {
 
         tooltip: {
             headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:,.0f}</b> euros investis<br/>'
+            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:,.0f}</b>\u20AC investis<br/>'
         },
 
         series: [{

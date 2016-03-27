@@ -346,4 +346,20 @@ footer h1
     height: 150px;
     float: center;
     }
-    
+#lien-bouton{
+   color:white;
+   font-family:verdana;
+   font-size:12px;
+   padding:5px 20px;
+   text-decoration:none;
+   background-image:url(degrade.png);
+   background-repeat:repaet-x;
+   background-position:top;
+   border:solid 1px white;
+   border-radius:2px;
+} 
+#lien{
+   color:white;
+   text-decoration:underline;
+   font-weight: bold;
+} 

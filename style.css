@@ -328,3 +328,22 @@ footer h1
     font-style: normal;
 
 }
+
+
+.dedicace1 {
+    width: 50%;
+    height: 200px;
+    float: left;
+}
+
+.dedicace2 {
+    margin-left: 30%;
+    height: 200px;
+    }
+    
+.imagecenter {
+    width: 75%;
+    height: 150px;
+    float: center;
+    }
+    
